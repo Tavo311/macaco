@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('fotos/7g89y38.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+.rules {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as divs na horizontal */
+}
+
+.rule {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    height: 150px;
+}
+
+.rule:hover {
+    background-color: #e0e0e0;
+}
+
+.rule-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.rule:hover .rule-content {
+    max-height: 200px;
+}
+
+.rule-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.rule:hover .rule-image {
+    opacity: 1;
+}
